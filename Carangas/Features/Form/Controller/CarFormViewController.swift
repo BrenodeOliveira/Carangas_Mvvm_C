@@ -46,21 +46,31 @@ final class CarFormViewController: UIViewController {
                         gasTypeIndex: segmentedControlGasType.selectedSegmentIndex)
 	}
 	
-    private func onCarCreated(result: Result<Void, CarServiceError>) {
+//    private func onCarCreated(result: Result<Void, CarServiceError>) {
+//        print("Carro criado")
+//        showResult(result)
+//    }
+//
+//    private func onCarUpdated(result: Result<Void, CarServiceError>) {
+//        print("Carro atualizado")
+//        showResult(result)
+//    }
+    
+    lazy var onCarCreated: (Result<Void, CarServiceError>) -> () = { [weak self] result in
         print("Carro criado")
-        showResult(result)
+        self?.showResult(result)
     }
     
-    private func onCarUpdated(result: Result<Void, CarServiceError>) {
+    lazy var onCarUpdated: (Result<Void, CarServiceError>) -> () =  { [weak self] in
         print("Carro atualizado")
-        showResult(result)
+        self?.showResult($0)
     }
     
 	private func showResult(_ result: Result<Void, CarServiceError>) {
 		switch result {
 		case .success:
 			DispatchQueue.main.async {
-				self.navigationController?.popViewController(animated: true)
+                self.viewModel?.back()
 			}
 		case .failure(let apiError):
 			print(apiError.errorMessage)

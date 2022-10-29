@@ -25,4 +25,11 @@ final class CarViewController: UIViewController {
 		}
 	}
 	
+    // MARK: - IBAction
+    
+    @IBAction func edit(_ sender: UIBarButtonItem) {
+        viewModel?.edit()
+    }
+    
+    
 }

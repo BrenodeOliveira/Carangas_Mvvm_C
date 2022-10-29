@@ -49,4 +49,12 @@ final class CarFormViewModel {
         }
         
     }
+    
+    func back() {
+        coordinator?.back()
+    }
+    
+    deinit {
+        coordinator?.childDidFinish(nil)
+    }
 }

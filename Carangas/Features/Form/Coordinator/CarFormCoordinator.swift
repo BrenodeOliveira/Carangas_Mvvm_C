@@ -13,7 +13,7 @@ final class CarFormCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
     private var car: Car?
     
-    init(navigationController: UINavigationController, car: Car?) {
+    init(navigationController: UINavigationController, car: Car? = nil) {
         self.navigationController = navigationController
         self.car = car
     }
@@ -21,6 +21,10 @@ final class CarFormCoordinator: Coordinator {
     func start() {
         let viewController = CarFormViewController.instantiateFromStoryboard(.form)
         viewController.viewModel = CarFormViewModel(car: car, coordinator: self)
-        navigationController.pushViewController(viewController, animated: false)
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func back() {
+        navigationController.popViewController(animated: true)
     }
 }

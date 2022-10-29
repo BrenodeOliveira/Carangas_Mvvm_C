@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" title="Caranga" id="p7f-5h-GZG">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="WJB-Yo-r0Y">
                             <connections>
-                                <segue destination="nvj-RT-cst" kind="show" id="l1R-HL-mf3"/>
+                                <action selector="edit:" destination="04V-cK-Zu2" id="Dwx-tt-xEP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -66,16 +66,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD7-DP-z0B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1607" y="426"/>
-        </scene>
-        <!--Form-->
-        <scene sceneID="Udt-H3-FlV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Form" id="nvj-RT-cst" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="2mW-Dt-Y6b"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lAN-bN-8Se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2357" y="426"/>
         </scene>
     </scenes>
     <resources>

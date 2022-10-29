@@ -40,4 +40,12 @@ final class CarVisualizationViewModel {
         self.car = car
         self.coordinator = coordinator
     }
+    
+    func edit() {
+        coordinator?.editCar(car)
+    }
+    
+    deinit {
+        coordinator?.childDidFinish(nil)
+    }
 }
