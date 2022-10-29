@@ -5,7 +5,6 @@
 //  Created by Usuário Convidado on 29/10/22.
 //
 
-import Foundation
 import UIKit
 
 final class CarsListingCoordinator: Coordinator {
@@ -21,5 +20,13 @@ final class CarsListingCoordinator: Coordinator {
         let viewController = CarsTableViewController.instantiateFromStoryboard(.listing)
         viewController.viewModel = CarsListingViewModel(coordinator: self)
         navigationController.pushViewController(viewController, animated: false)
+    }
+    
+    func showCar(_ car: Car) {
+        print("Mostrando carro")
+    }
+    
+    func showCarCreation() {
+        print("Exibindo carro")
     }
 }

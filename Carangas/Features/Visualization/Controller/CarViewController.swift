@@ -25,8 +25,4 @@ final class CarViewController: UIViewController {
 		}
 	}
 	
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		guard let vc = segue.destination as? CarFormViewController else { return }
-        vc.viewModel = viewModel?.getCarFormViewModel()
-	}
 }

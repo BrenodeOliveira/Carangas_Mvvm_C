@@ -24,9 +24,11 @@ final class CarFormViewModel {
     var price: String { "\(car.price)" }
     var gasType: Int { car.gasType }
     var buttonTitle: String { isEditing ? "Atualizar carro" : "Cadastrar carro" }
+    private weak var coordinator: CarFormCoordinator?
     
-    init(car: Car? = nil) {
+    init(car: Car? = nil, coordinator: CarFormCoordinator) {
         self.car = car ?? Car()
+        self.coordinator = coordinator
     }
     
     func save(name: String, brand: String, price: String, gasTypeIndex: Int) {

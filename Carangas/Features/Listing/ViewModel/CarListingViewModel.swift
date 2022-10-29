@@ -53,9 +53,12 @@ final class CarsListingViewModel {
         }
     }
     
-    func getCarVisualizationViewModel(at indexPath: IndexPath) -> CarVisualizationViewModel {
+    func showCarAt(_ indexPath: IndexPath) {
         let car = cars[indexPath.row]
-        return CarVisualizationViewModel(car: car)
+        coordinator?.showCar(car)
     }
     
+    func showCarCreation() {
+        coordinator?.showCarCreation()
+    }
 }
