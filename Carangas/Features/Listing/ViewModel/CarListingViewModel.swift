@@ -11,6 +11,11 @@ final class CarsListingViewModel {
     
     private var cars: [Car] = []
     private var service = CarService()
+    private weak var coordinator: CarsListingCoordinator?
+    
+    init(coordinator: CarsListingCoordinator) {
+        self.coordinator = coordinator
+    }
     
     var numberOfRows: Int {
         cars.count

@@ -17,6 +17,11 @@
 		5C915A0028627D9300A0BD83 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9159FF28627D9300A0BD83 /* Car.swift */; };
 		5C915A0328627FB400A0BD83 /* CarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C915A0228627FB400A0BD83 /* CarService.swift */; };
 		5C915A0528628D6400A0BD83 /* CarServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C915A0428628D6400A0BD83 /* CarServiceError.swift */; };
+		AC176192290D4E4400473041 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC176191290D4E4400473041 /* Coordinator.swift */; };
+		AC176195290D522000473041 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC176194290D522000473041 /* AppCoordinator.swift */; };
+		AC176198290D54B400473041 /* UIViewController+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC176197290D54B400473041 /* UIViewController+Instantiate.swift */; };
+		AC17619A290D56A600473041 /* UIStoryboard+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC176199290D56A600473041 /* UIStoryboard+Names.swift */; };
+		AC17619D290D57E400473041 /* CarsListingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC17619C290D57E400473041 /* CarsListingCoordinator.swift */; };
 		ACAA2F1428F626630013A41D /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2F1328F626630013A41D /* Form.storyboard */; };
 		ACAA2F1628F626FF0013A41D /* Visualization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2F1528F626FF0013A41D /* Visualization.storyboard */; };
 		ACAA2F1828F628B70013A41D /* Listing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAA2F1728F628B70013A41D /* Listing.storyboard */; };
@@ -40,6 +45,11 @@
 		5C9159FF28627D9300A0BD83 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		5C915A0228627FB400A0BD83 /* CarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarService.swift; sourceTree = "<group>"; };
 		5C915A0428628D6400A0BD83 /* CarServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarServiceError.swift; sourceTree = "<group>"; };
+		AC176191290D4E4400473041 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AC176194290D522000473041 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AC176197290D54B400473041 /* UIViewController+Instantiate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Instantiate.swift"; sourceTree = "<group>"; };
+		AC176199290D56A600473041 /* UIStoryboard+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Names.swift"; sourceTree = "<group>"; };
+		AC17619C290D57E400473041 /* CarsListingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsListingCoordinator.swift; sourceTree = "<group>"; };
 		ACAA2F1328F626630013A41D /* Form.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 		ACAA2F1528F626FF0013A41D /* Visualization.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Visualization.storyboard; sourceTree = "<group>"; };
 		ACAA2F1728F628B70013A41D /* Listing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Listing.storyboard; sourceTree = "<group>"; };
@@ -94,6 +104,7 @@
 			children = (
 				5C1A679128626EF600366E5E /* AppDelegate.swift */,
 				5C1A679328626EF600366E5E /* SceneDelegate.swift */,
+				AC176193290D51F900473041 /* Coordinator */,
 				5C9159F72862754100A0BD83 /* View */,
 			);
 			path = Main;
@@ -120,6 +131,7 @@
 		5C9159F92862759A00A0BD83 /* Listing */ = {
 			isa = PBXGroup;
 			children = (
+				AC17619B290D57D000473041 /* Coordinator */,
 				ACAA2F0928F625100013A41D /* Controller */,
 				ACAA2F0B28F625830013A41D /* View */,
 				ACAA2F0A28F625190013A41D /* ViewModel */,
@@ -150,6 +162,8 @@
 		5C9159FD28627D6500A0BD83 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				AC176196290D547C00473041 /* Extensions */,
+				AC176190290D4E3200473041 /* Protocol */,
 				5C915A0128627F9C00A0BD83 /* Services */,
 				5C9159FE28627D7600A0BD83 /* Model */,
 			);
@@ -171,6 +185,39 @@
 				5C915A0228627FB400A0BD83 /* CarService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AC176190290D4E3200473041 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AC176191290D4E4400473041 /* Coordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AC176193290D51F900473041 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AC176194290D522000473041 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AC176196290D547C00473041 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC176197290D54B400473041 /* UIViewController+Instantiate.swift */,
+				AC176199290D56A600473041 /* UIStoryboard+Names.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AC17619B290D57D000473041 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AC17619C290D57E400473041 /* CarsListingCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		ACAA2F0928F625100013A41D /* Controller */ = {
@@ -326,11 +373,16 @@
 				5C915A0528628D6400A0BD83 /* CarServiceError.swift in Sources */,
 				5C1A679628626EF600366E5E /* CarViewController.swift in Sources */,
 				ACAA2F1C28F62F5D0013A41D /* CarTableViewCell.swift in Sources */,
+				AC17619D290D57E400473041 /* CarsListingCoordinator.swift in Sources */,
+				AC176192290D4E4400473041 /* Coordinator.swift in Sources */,
 				5C915A0328627FB400A0BD83 /* CarService.swift in Sources */,
 				ACAA2F1E28F6305E0013A41D /* CarCellViewModel.swift in Sources */,
 				ACAA2F2228F640560013A41D /* CarFormViewModel.swift in Sources */,
 				5C915A0028627D9300A0BD83 /* Car.swift in Sources */,
+				AC17619A290D56A600473041 /* UIStoryboard+Names.swift in Sources */,
 				5C1A67A828626F8E00366E5E /* CarFormViewController.swift in Sources */,
+				AC176195290D522000473041 /* AppCoordinator.swift in Sources */,
+				AC176198290D54B400473041 /* UIViewController+Instantiate.swift in Sources */,
 				5C1A679228626EF600366E5E /* AppDelegate.swift in Sources */,
 				5C1A679428626EF600366E5E /* SceneDelegate.swift in Sources */,
 			);
