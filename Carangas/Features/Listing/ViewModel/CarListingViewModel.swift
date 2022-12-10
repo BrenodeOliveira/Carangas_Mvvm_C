@@ -10,11 +10,12 @@ import Foundation
 final class CarsListingViewModel {
     
     private var cars: [Car] = []
-    private var service = CarService()
+    private let service: CarServiceProtocol
     private weak var coordinator: CarsListingCoordinator?
     
-    init(coordinator: CarsListingCoordinator) {
+    init(service: CarServiceProtocol = CarService() ,coordinator: CarsListingCoordinator) {
         self.coordinator = coordinator
+        self.service = service
     }
     
     var numberOfRows: Int {
